@@ -4,9 +4,189 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Company Profile</title>
+    <link rel="stylesheet" href="css/index.css">
 </head>
+<style>*{margin: 0px;
+    padding: 0px;}
+
+</style>
 <body>
-    
+    <header class="header-wrapper">
+        <img src="img/Logo-pentravel.png"  alt="logo" class="logo" width="100" height="10">
+        <div id="navbar" class="nav-bar">
+            <a class="nav-item" href="#hero"><b>HOME</b></a>
+            <a class="nav-item" href="about.html"><b>ABOUT</b></a>
+            <a class="nav-item" href="#hq-section"><b>HEADQUARTERS</b></a>
+            <a class="nav-item" href="#message-section"><b>MESSAGE US</b></a>
+        </div>
+    </header>
+
+    <div id="hero" class="hero">
+        <!-- <img src="img/hero.jpg" alt=""> -->
+        <h1><b>Hi</b> <span id="jeneng"></span>, WELCOME!!!</h1>
+        <h2><b>IT'S NICE TO MEET YOU</b></h2>
+        <br />
+        <h2><button><input type="submit" value="MORE" id="mainbutton" onclick="window.location.href='about.html';"></button></h2>
+    </div>
+
+    <!-- <script>
+        var jeneng = prompt("Masukkan Nama Kamu")
+        var element = document.getElementById("jeneng").innerText = jeneng
+    </script> -->
+
+    <div id="service-section" class="service">
+        <h1 class="ourservicetext"><b>OUR SERVICES</b></h1>
+        <div class="wrapper">
+            <div class="service-images-container">               
+                <div class="sr-images1">
+                    <picture><img src="img/ticket.jpg" alt=""></picture><br />  
+                    <p><b>TICKETING CONSULTAN</b></p><br />  
+                <p>Melayani Penjualan tiket pesawat dan kereta api domestik maupun internasional
+                </p>
+                </div>                
+            </div>
+            <div class="service-images-container">               
+                <div class="sr-images2">
+                    <picture><img src="img/mice.jpg" alt=""></picture><br />  
+                    <p><b>MICE TOUR</b></p><br />  
+                <p>Terdapat paket pertemuan, insentif dan ionvensi serta pameran (MICE)</p>
+                </div>                
+            </div>
+            <div class="service-images-container">               
+                <div class="sr-images3">
+                    <picture><img src="img/hajj.jpg" alt=""></picture><br />  
+                    <p><b>HAJJ & UMROH</b></p><br />  
+                <p>Paket perjalanan ibadah Umroh dan Haji Khusus beserta Pengurusan dokumen perjalanan ( passport, visa, asuransi dll )</p>
+                </div> 
+            </div>
+        </div>   
+    </div>
+
+    <div id="hq-section" class="bungkusluar">
+        <h1>Our Headquarters</h1>
+        <div class="wrapper">
+            <div class="hq-images-container">               
+                <div class="hq-images1">
+                    <picture><img src="img/gedung1.jpg" alt=""></picture>
+                </div><br />                
+                <p><b>JAKARTA</b></p></div>
+            <div class="hq-images-container">
+                <div class="hq-images2">
+                    <picture><img src="img/gedung2.jpeg" alt=""></picture>
+                </div><br />
+                <p><b>BANDUNG</b></p></div>
+            <div class="hq-images-container">
+                <div class="hq-images3">
+                    <picture><img src="img/gedung3.jpg" alt=""></picture>
+                </div><br />
+                    <p><b>SURABAYA</b></p></div>
+        </div>
+    </div>       
+
+    <div id="message-section" class="message-us">
+        <h1>Message Us</h1>
+        <br />
+        <br />
+        <div class="isiform">
+            <div class="baris-input">
+                <form name="message-form" onsubmit="return validateform()">
+                        <table id="form"  cellspacing="0"> 
+                            <tr>
+                                <td>Nama</td>
+                                <td>:</td>
+                                <td><input placeholder="Nama" type="text" name="full-name"></td>
+                            </tr>
+                            <tr>
+                                <td>Email</td>
+                                <td>:</td>
+                                <td><input placeholder="Email" type="email" name="email"></td>
+                            </tr>
+                            <tr>
+                                <td>Nomor Telp.</td>
+                                <td>:</td>
+                                <td><input placeholder="No.Telp" type="number" name="telp"></td>
+                            </tr>                                    
+                            <tr>
+                                <td>Tanggal lahir </td>
+                                <td>:</td> 
+                                <td><input type="date" name="tgl-lahir"></td>
+                            </tr>                            
+                            <tr>
+                                <td>Jenis Kelamin </td>
+                                <td>:</td>
+                                <td>
+                                    <input type="radio" id="male" name="gender" value="Laki-laki" />
+                                    <label for="male">Laki-laki</label>
+                                    <input type="radio" id="female" name="gender" value="Perempuan" />
+                                    <label for="female">Perempuan</label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Pesan</td>
+                                <td>:</td> 
+                                <td><textarea placeholder="Pesan" name="Messages"></textarea></td>
+                            </tr>
+                        </table>
+                    <button><input type="submit" value="SUBMIT" id="kirim"></button>
+                </form>
+            </div>
+            <div class="form-output">
+                <table>
+                <tr>
+                    <td>
+                        Nama
+                    </td>
+                    <td>:</td>
+                    <td><span id="sendername"></span></td>
+                    <br />
+                </tr>
+                <tr>
+                    <td>
+                        Email
+                    </td>
+                    <td>:</td>
+                    <td><span id="senderemail"></span></td>
+                </tr>
+                <tr>
+                    <td>
+                        No. Telp.
+                    </td>
+                    <td>:</td>
+                    <td><span id="sendertelp"></span></td>
+                </tr>
+                <tr>
+                    <td>
+                        Tanggal lahir 
+                    </td>
+                    <td>:</td>
+                    <td><span id="senderlahir"></span></td>
+                    <br />
+                </tr>
+                <tr>
+                    <td>
+                        Jenis kelamin
+                    </td>
+                    <td>:</td>
+                    <td><span id="senderkelamin"></span></td>
+                </tr>
+                <tr>
+                    <td>
+                        Pesan
+                    </td>
+                    <td>:</td>
+                    <td><span id="senderpesan"></span></td>
+                </tr>
+                <!-- <tr><td><p>Nama : <span id="sendername"></span></p></td></tr>
+                <tr><td><p>Tanggal lahir <span id="senderlahir"></span></p></td></tr>
+                <tr><td><p>Jenis kelamin <span id="senderkelamin"></span></p></td></tr>
+                <tr><td><p>Pesan <span id="senderpesan"></span></p></td></tr> -->
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">Created by RevoU</footer>
+    <script src="js/script.js"></script>
 </body>
 </html>
